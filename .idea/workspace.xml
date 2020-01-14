@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cfcdc31-faba-4cde-a735-82f84d5717a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cogs/info.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/info.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,18 +87,34 @@
       <workItem from="1578850698845" duration="877000" />
       <workItem from="1578851641806" duration="1035000" />
       <workItem from="1578907000588" duration="3166000" />
-      <workItem from="1578998554899" duration="153000" />
+      <workItem from="1578998554899" duration="340000" />
     </task>
+    <task id="LOCAL-00001" summary="Added description for change commmand">
+      <created>1578998742177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578998742177</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added description for change commmand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added description for change commmand" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1578998564199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1578998564199" />
+    <state x="393" y="7" key="CommitChangelistDialog2" timestamp="1578998741309">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578998741309" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1578910187271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -120,6 +135,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578907901908" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1578998754793">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578998754793" />
     <state x="465" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1578907016275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
