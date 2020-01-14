@@ -1,0 +1,14 @@
+{
+  "join_message": "I has joined to do stuff 🌟",
+  "owners": [
+    598602545023418380
+  ],
+  "prefix": [
+    "!"
+  ],
+  "playing": "In Development!",
+  "playing_type": "playing|watching|listening",
+  "status_type": "online|idle|dnd",
+  "version": "1.0.0",
+  "botserver": "https://discord.gg/PN8uePv" 
+}
