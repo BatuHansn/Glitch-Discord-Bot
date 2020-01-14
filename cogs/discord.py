@@ -13,14 +13,14 @@ class Discord_Info(commands.Cog):
     @commands.command()
     @commands.guild_only()
     async def avatar(self, ctx, *, user: discord.Member = None):
-        """ Get the avatar of you or someone else """
+        """ Get the avatar of yourself or someone else. """
         user = user or ctx.author
         await ctx.send(f"Avatar to **{user.name}**\n{user.avatar_url_as(size=1024)}")
 
     @commands.command()
     @commands.guild_only()
     async def roles(self, ctx):
-        """ Get all roles in current server """
+        """ Get all roles in the current server. """
         allroles = ""
 
         for num, role in enumerate(sorted(ctx.guild.roles, reverse=True), start=1):
@@ -32,7 +32,7 @@ class Discord_Info(commands.Cog):
     @commands.command()
     @commands.guild_only()
     async def joinedat(self, ctx, *, user: discord.Member = None):
-        """ Check when a user joined the current server """
+        """ Check when a user joined the current server. """
         user = user or ctx.author
 
         embed = discord.Embed(colour=user.top_role.colour.value)
@@ -43,7 +43,7 @@ class Discord_Info(commands.Cog):
     @commands.command()
     @commands.guild_only()
     async def mods(self, ctx):
-        """ Check which mods are online on current guild """
+        """ Check which mods are online on the current guild. """
         message = ""
         online, idle, dnd, offline = [], [], [], []
 
@@ -73,7 +73,7 @@ class Discord_Info(commands.Cog):
     @commands.group()
     @commands.guild_only()
     async def server(self, ctx):
-        """ Check info about current server """
+        """ Check info about the current server. """
         if ctx.invoked_subcommand is None:
             findbots = sum(1 for member in ctx.guild.members if member.bot)
 
@@ -95,14 +95,14 @@ class Discord_Info(commands.Cog):
 
     @server.command(name="avatar", aliases=["icon"])
     async def server_avatar(self, ctx):
-        """ Get the current server icon """
+        """ Get the current server icon. """
         if not ctx.guild.icon:
             return await ctx.send("This server does not have a avatar...")
         await ctx.send(f"Avatar of **{ctx.guild.name}**\n{ctx.guild.icon_url_as(size=1024)}")
 
     @server.command(name="banner")
     async def server_banner(self, ctx):
-        """ Get the current banner image """
+        """ Get the current banner image. """
         if not ctx.guild.banner:
             return await ctx.send("This server does not have a banner...")
         await ctx.send(f"Banner of **{ctx.guild.name}**\n{ctx.guild.banner_url_as(format='png')}")
@@ -110,7 +110,7 @@ class Discord_Info(commands.Cog):
     @commands.command()
     @commands.guild_only()
     async def user(self, ctx, *, user: discord.Member = None):
-        """ Get user information """
+        """ Get user information. """
         user = user or ctx.author
 
         embed = discord.Embed(colour=user.top_role.colour.value)

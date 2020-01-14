@@ -25,7 +25,7 @@ class Information(commands.Cog):
 
     @commands.command(aliases=['joinme', 'join', 'botinvite'])
     async def invite(self, ctx):
-        """ Invite me to your server """
+        """ Invite me to your server. """
         await ctx.send(f"**{ctx.author.name}**, use this URL to invite me\n<{discord.utils.oauth_url(self.bot.user.id)}>")
 
     @commands.command()
@@ -46,7 +46,7 @@ class Information(commands.Cog):
 
     @commands.command(aliases=['info', 'stats', 'status'])
     async def about(self, ctx):
-        """ About the bot """
+        """ About the bot. """
         ramUsage = self.process.memory_info()[0] / 1024**2
         avgmembers = round(len(self.bot.users) / len(self.bot.guilds))
 

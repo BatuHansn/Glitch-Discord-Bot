@@ -101,7 +101,7 @@ class Admin(commands.Cog):
     @commands.command()
     @commands.check(permissions.is_owner)
     async def reboot(self, ctx):
-        """ Reboot the bot """
+        """ Reboot the bot. """
         await ctx.send('Rebooting now...')
         time.sleep(1)
         sys.exit(0)
@@ -109,7 +109,7 @@ class Admin(commands.Cog):
     @commands.command()
     @commands.check(permissions.is_owner)
     async def dm(self, ctx, user_id: int, *, message: str):
-        """ DM the user of your choice """
+        """ DM the user of your choice. """
         user = self.bot.get_user(user_id)
         if not user:
             return await ctx.send(f"Could not find any UserID matching **{user_id}**")
@@ -123,7 +123,7 @@ class Admin(commands.Cog):
     @commands.group()
     @commands.check(permissions.is_owner)
     async def change(self, ctx):
-        """ Get a list of change commands """
+        """ Get a list of change commands. """
         if ctx.invoked_subcommand is None:
             await ctx.send_help(str(ctx.command))
 

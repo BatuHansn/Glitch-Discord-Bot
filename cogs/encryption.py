@@ -15,13 +15,13 @@ class Encryption(commands.Cog):
 
     @commands.group()
     async def encode(self, ctx):
-        """ All encode methods """
+        """ All encode methods. """
         if ctx.invoked_subcommand is None:
             await ctx.send_help(str(ctx.command))
 
     @commands.group()
     async def decode(self, ctx):
-        """ All decode methods """
+        """ All decode methods. """
         if ctx.invoked_subcommand is None:
             await ctx.send_help(str(ctx.command))
 

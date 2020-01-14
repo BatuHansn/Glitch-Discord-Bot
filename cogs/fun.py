@@ -18,7 +18,7 @@ class Fun_Commands(commands.Cog):
 
     @commands.command(aliases=['8ball'])
     async def eightball(self, ctx, *, question: commands.clean_content):
-        """ Consult 8ball to receive an answer """
+        """ Consult 8ball to receive an answer. """
         answer = random.choice(lists.ballresponse)
         await ctx.send(f"🎱 **Question:** {question}\n**Answer:** {answer}")
 
@@ -49,25 +49,25 @@ class Fun_Commands(commands.Cog):
     @commands.command()
     @commands.cooldown(rate=1, per=1.5, type=commands.BucketType.user)
     async def cat(self, ctx):
-        """ Posts a random cat """
+        """ Posts a random cat. """
         await self.randomimageapi(ctx, 'https://api.alexflipnote.dev/cats', 'file', '🐱 Random Cat Image')
 
     @commands.command()
     @commands.cooldown(rate=1, per=1.5, type=commands.BucketType.user)
     async def dog(self, ctx):
-        """ Posts a random dog """
+        """ Posts a random dog. """
         await self.randomimageapi(ctx, 'https://api.alexflipnote.dev/dogs', 'file', '🐶 Random Doggo')
 
     @commands.command(aliases=["bird"])
     @commands.cooldown(rate=1, per=1.5, type=commands.BucketType.user)
     async def birb(self, ctx):
-        """ Posts a random birb """
+        """ Posts a random birb. """
         await self.randomimageapi(ctx, 'https://api.alexflipnote.dev/birb', 'file', '🐦 Random Birb')
 
     @commands.command()
     @commands.cooldown(rate=1, per=1.5, type=commands.BucketType.user)
     async def duck(self, ctx):
-        """ Posts a random duck """
+        """ Posts a random duck. """
         await self.randomimageapi(ctx, 'https://random-d.uk/api/v1/random', 'url', '🦆 Random Duck')
 
     @commands.command(aliases=['flip', 'coin'])
@@ -78,14 +78,14 @@ class Fun_Commands(commands.Cog):
 
     @commands.command()
     async def f(self, ctx, *, text: commands.clean_content = None):
-        """ Press F to pay respect """
+        """ Press F to pay respect. """
         hearts = ['❤', '💛', '💚', '💙', '💜']
         reason = f"for **{text}** " if text else ""
         await ctx.send(f"**{ctx.author.name}** has paid their respect {reason}{random.choice(hearts)}")
 
     @commands.command()
     async def supreme(self, ctx, *, text: commands.clean_content(fix_channel_mentions=True)):
-        """ Make a fake Supreme logo
+        """ Make a fake Supreme logo.
 
         Arguments:
             --dark | Make the background to dark colour
@@ -118,7 +118,7 @@ class Fun_Commands(commands.Cog):
     @commands.command(aliases=['color'])
     @commands.cooldown(rate=1, per=3.0, type=commands.BucketType.user)
     async def colour(self, ctx, colour: str):
-        """ View the colour HEX details """
+        """ View the colour HEX details. """
         async with ctx.channel.typing():
             if not permissions.can_embed(ctx):
                 return await ctx.send("I can't embed in this channel ;-;")
@@ -153,7 +153,7 @@ class Fun_Commands(commands.Cog):
     @commands.command()
     @commands.cooldown(rate=1, per=2.0, type=commands.BucketType.user)
     async def urban(self, ctx, *, search: str):
-        """ Find the 'best' definition to your words """
+        """ Find the 'best' definition to your words. """
         async with ctx.channel.typing():
             url = await http.get(f'https://api.urbandictionary.com/v0/define?term={search}', res_method="json")
 
@@ -175,7 +175,7 @@ class Fun_Commands(commands.Cog):
 
     @commands.command()
     async def reverse(self, ctx, *, text: str):
-        """ !poow ,ffuts esreveR
+        """ !ffuts esreveR
         Everything you type after reverse will of course, be reversed
         """
         t_rev = text[::-1].replace("@", "@\u200B").replace("&", "&\u200B")
@@ -183,7 +183,7 @@ class Fun_Commands(commands.Cog):
 
     @commands.command()
     async def password(self, ctx, nbytes: int = 18):
-        """ Generates a random password string for you
+        """ Generates a random password string for you.
 
         This returns a random URL-safe text string, containing nbytes random bytes.
         The text is Base64 encoded, so on average each byte results in approximately 1.3 characters.
@@ -196,7 +196,7 @@ class Fun_Commands(commands.Cog):
 
     @commands.command()
     async def rate(self, ctx, *, thing: commands.clean_content):
-        """ Rates what you desire """
+        """ Rates what you desire. """
         num = random.randint(0, 100)
         deci = random.randint(0, 9)
 
@@ -240,7 +240,7 @@ class Fun_Commands(commands.Cog):
 
     @commands.command(aliases=['howhot', 'hot'])
     async def hotcalc(self, ctx, *, user: discord.Member = None):
-        """ Returns a random percent for how hot is a discord user """
+        """ Returns a random percent for how hot a discord user is.  """
         user = user or ctx.author
 
         random.seed(user.id)
@@ -269,7 +269,7 @@ class Fun_Commands(commands.Cog):
     @commands.command(aliases=['slots', 'bet'])
     @commands.cooldown(rate=1, per=3.0, type=commands.BucketType.user)
     async def slot(self, ctx):
-        """ Roll the slot machine """
+        """ Roll the slot machine. """
         emojis = "🍎🍊🍐🍋🍉🍇🍓🍒"
         a = random.choice(emojis)
         b = random.choice(emojis)

@@ -146,7 +146,7 @@ class Moderator(commands.Cog):
     @commands.guild_only()
     @permissions.has_permissions(manage_roles=True)
     async def announcerole(self, ctx, *, role: discord.Role):
-        """ Makes a role mentionable and removes it whenever you mention the role """
+        """ Makes a role mentionable and removes it whenever you mention the role. """
         if role == ctx.guild.default_role:
             return await ctx.send("To prevent abuse, I won't allow mentionable role for everyone/here role.")
 
@@ -182,7 +182,7 @@ class Moderator(commands.Cog):
     @commands.guild_only()
     @permissions.has_permissions(ban_members=True)
     async def find(self, ctx):
-        """ Finds a user within your search term """
+        """ Finds a user within your search term. """
         if ctx.invoked_subcommand is None:
             await ctx.send_help(str(ctx.command))
 
@@ -228,7 +228,7 @@ class Moderator(commands.Cog):
     @commands.guild_only()
     @permissions.has_permissions(manage_messages=True)
     async def prune(self, ctx):
-        """ Removes messages from the current server. """
+        """ Removes messages from the current channel. """
         if ctx.invoked_subcommand is None:
             await ctx.send_help(str(ctx.command))
 
