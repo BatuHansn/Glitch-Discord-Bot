@@ -1,2 +1,2 @@
-# Reformed-Bot
+# Glitch
  My Personal Discord Bot
